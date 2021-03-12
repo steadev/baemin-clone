@@ -28,7 +28,7 @@ export class Section {
     }
 
     drawHeader() {
-
+        console.log('drawHeader');
     }
 
     drawFooter() {
