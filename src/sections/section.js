@@ -1,7 +1,6 @@
 export class Section {
-    constructor(type, page = 0) {
-        this.createSection(type, page);
-    }
+    constructor() { }
+    appElem = document.querySelector('.app');
 
     createSection(type, page) {
         this.drawSection(type, page)
@@ -14,28 +13,55 @@ export class Section {
     drawSection(type, page) {
         switch (type) {
             case 'header':
-                this.drawHeader();
+                this.drawHeaderContent();
                 break;
             case 'main':
-                this.drawMain(page);
+                this.drawMainContent(page);
                 break;
             case 'footer':
-                this.drawFooter();
+                this.drawFooterContent();
                 break;
             default:
                 console.error(`ERROR: There is no section type - ${type}`);
         }
     }
 
-    drawHeader() {
-        console.log('drawHeader');
+    drawBase() {
+        const html = `
+        <div class="header">
+            <img class="logo" src="assets/images/logo.png">
+        </div>
+        <div class="footer">
+            <img src="assets/images/scroll.png">
+        </div>
+        `;
+        this.appElem.innerHTML = html;
     }
 
-    drawFooter() {
+    drawHeaderContent() {
+        const html = `
+        <div class="header-content-container content-container">
+            <div class="header-content">
+                <div class="title">
+                    <img class="title-image" src="assets/images/header-content-text.png">
+                </div>
+                <div class="incruit-button">
+                    <img class="incruit-button-image" src="assets/images/btn-rider.png">
+                </div>
+                <div class="app-download-button">
+                    <img class="app-download-button-image" src="assets/images/btn-down-app.png">
+                </div>
+            </div>
+        </div>
+        `;
+        this.appElem.innerHTML += html;
+    }
+
+    drawFooterContent() {
 
     }
 
-    drawMain(page) {
+    drawMainContent(page) {
 
     }
 }
