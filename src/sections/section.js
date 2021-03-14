@@ -29,7 +29,7 @@ export class Section {
     drawBase() {
         const html = `
         <div class="header">
-            <img src="assets/images/logo.png">
+            <img class="logo" src="assets/images/logo.png">
         </div>
         <div class="footer">
             <img src="assets/images/scroll.png">
@@ -40,7 +40,18 @@ export class Section {
 
     drawHeaderContent() {
         const html = `
-        <div class="header-content">
+        <div class="header-content-container content-container">
+            <div class="header-content">
+                <div class="title">
+                    <img class="title-image" src="assets/images/header-content-text.png">
+                </div>
+                <div class="incruit-button">
+                    <img class="incruit-button-image" src="assets/images/btn-rider.png">
+                </div>
+                <div class="app-download-button">
+                    <img class="app-download-button-image" src="assets/images/btn-down-app.png">
+                </div>
+            </div>
         </div>
         `;
         this.appElem.innerHTML += html;
