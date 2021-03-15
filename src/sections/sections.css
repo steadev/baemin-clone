@@ -14,6 +14,7 @@
     position: absolute;
     bottom: 3%;
     left: 6%;
+    transition-duration: 1s;
 }
 
 .content-container {
@@ -25,7 +26,7 @@
 }
 
 .header-content-container {
-    background-image: url("../../images/header-content-background.jpg");
+    background-image: url("../../assets/images/header-content-background.jpg");
 }
 
 .header-content {
