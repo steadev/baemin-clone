@@ -62,6 +62,11 @@ export class Section {
     }
 
     drawMainContent(page) {
-
+        const html = `
+        <div class="main-content content-container">
+            ${page}
+        </div>
+        `;
+        this.appElem.innerHTML += html;
     }
 }

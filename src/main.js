@@ -5,6 +5,10 @@ const app = () => {
     const section = new Section('header');
     section.drawBase();
     section.drawSection('header');
+    const mainPageCount = 6;
+    for (let i = 0; i < mainPageCount; i++) {
+        section.drawSection('main', i);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

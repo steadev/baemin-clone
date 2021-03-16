@@ -11,7 +11,7 @@
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 3%;
     left: 6%;
     transition-duration: 1s;
