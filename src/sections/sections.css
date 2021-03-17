@@ -29,6 +29,10 @@
     background-image: url("../../assets/images/header-content-background.jpg");
 }
 
+.main-content-container {
+    background-image: url("../../assets/images/header-content-background.jpg");
+}
+
 .header-content {
     padding: 0 6%;
     width: 100%;

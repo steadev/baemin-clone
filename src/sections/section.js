@@ -62,9 +62,20 @@ export class Section {
     }
 
     drawMainContent(page) {
+        const backgroundImage = `assets/images/header-content-background.jpg`;
         const html = `
-        <div class="main-content content-container">
-            ${page}
+        <div class="main-content-container content-container">
+            <div class="header-content">
+                <div class="title">
+                    <img class="title-image" src="assets/images/header-content-text.png">
+                </div>
+                <div class="incruit-button">
+                    <img class="incruit-button-image" src="assets/images/btn-rider.png">
+                </div>
+                <div class="app-download-button">
+                    <img class="app-download-button-image" src="assets/images/btn-down-app.png">
+                </div>
+            </div>
         </div>
         `;
         this.appElem.innerHTML += html;
