@@ -59,7 +59,7 @@ export class Section {
 
     drawFooterContent() {
         const html = `
-        <div class="header-content-container content-container">
+        <div class="footer-content-container content-container">
             <div class="header-content">
                 <div class="title">
                     <img class="title-image" src="assets/images/header-content-text.png">
@@ -77,7 +77,6 @@ export class Section {
     }
 
     drawMainContent(page) {
-        const backgroundImage = `assets/images/header-content-background.jpg`;
         const html = `
         <div class="main-content-container content-container">
             <div class="header-content">

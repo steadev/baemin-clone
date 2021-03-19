@@ -30,7 +30,11 @@
 }
 
 .main-content-container {
-    background-image: url("../../assets/images/header-content-background.jpg");
+    background-color: #2ac1bc;
+}
+
+.footer-content-container {
+    background-color: #ffffff;
 }
 
 .header-content {
