@@ -79,9 +79,9 @@ export class Section {
     drawMainContent(page) {
         const html = `
         <div class="main-content-container content-container">
-            <div class="header-content">
-                <div class="title">
-                    <img class="title-image" src="assets/images/header-content-text.png">
+            <div class="main-content">
+                <div class="title" style="top:calc(${100 * (page + 1)}% + 20%)">
+                    <img class="title-image" src="assets/images/main-text-${page}.png">
                 </div>
                 <div class="incruit-button">
                     <img class="incruit-button-image" src="assets/images/btn-rider.png">
