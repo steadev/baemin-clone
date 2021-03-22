@@ -60,17 +60,7 @@ export class Section {
     drawFooterContent() {
         const html = `
         <div class="footer-content-container content-container">
-            <div class="header-content">
-                <div class="title">
-                    <img class="title-image" src="assets/images/header-content-text.png">
-                </div>
-                <div class="incruit-button">
-                    <img class="incruit-button-image" src="assets/images/btn-rider.png">
-                </div>
-                <div class="app-download-button">
-                    <img class="app-download-button-image" src="assets/images/btn-down-app.png">
-                </div>
-            </div>
+
         </div>
         `;
         this.appElem.innerHTML += html;
