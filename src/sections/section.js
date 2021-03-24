@@ -1,6 +1,7 @@
 export class Section {
     constructor() { }
     appElem = document.querySelector('.app');
+    mainPageCount = 6;
 
     createSection(type, page) {
         this.drawSection(type, page)
@@ -61,8 +62,8 @@ export class Section {
         const html = `
         <div class="footer-content-container content-container">
             <div class="footer-content">
-                <div class="title" style="top:calc(${700}% + 20%)">
-                    <img class="title-image" src="assets/images/main-text-${page}.png">
+                <div class="title" style="top:calc(${(this.mainPageCount + 2) * 100}% + 20%)">
+                    <img class="title-image" src="">
                 </div>
                 <div class="incruit-button">
                     <img class="incruit-button-image" src="assets/images/btn-rider.png">
