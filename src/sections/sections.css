@@ -30,21 +30,29 @@
 }
 
 .main-content-container {
-    background-image: url("../../assets/images/header-content-background.jpg");
+    background-color: #2ac1bc;
+    color: #ffffff;
 }
 
-.header-content {
+.content {
+    position: relative;
     padding: 0 6%;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
 }
-.title {
+.header-title {
     position: absolute;
     max-width: 440px;
     width: 440px;
-    top: 20%;
+    padding-top: 20%;
     left: 50px;
 }
+
+.main-title {
+    width: 65%;
+    padding-top: 20%;
+}
+
 .title-image {
     width: 100%;
 }
@@ -70,11 +78,143 @@
     width: 100%;
 }
 
+.title-desc {
+    margin-top: 6%;
+    font-weight: 300;
+}
+
+.title-sub-desc {
+    line-height: 3rem;
+    display: block;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+.animation {
+    display: block;
+}
+
+.animation img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.move-bike,
+.move-bike,
+.move-people,
+.move-present,
+.move-shopping,
+.move-bmart-rider,
+.move-flag {
+    -webkit-animation: bike 0.8s ease forwards;
+    animation: bike 0.8s ease forwards;
+}
+
+.road {
+    position: absolute;
+    bottom: 30%;
+    right: 32%;
+    width: 42%;
+}
+
+.bike {
+    position: absolute;
+    bottom: 26%;
+    right: 25%;
+    width: 42%;
+}
+
+.people {
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    width: 85%;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+}
+
+.present {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55.2%;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+}
+
+.shopping {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 55.2%;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+}
+
+.bmart-rider {
+    position: absolute;
+    bottom: 30px;
+    right: 10%;
+    width: 80%;
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.flag {
+    position: absolute;
+    bottom: 0;
+    right: -7%;
+    width: 70%;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+}
+
+
 @media only screen and (min-width: 1024px) {
     .footer {
-        position: absolute;
+        position: fixed;
         bottom: 20px;
         left: 50%;
         margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .road {
+        bottom: 16%;
+        right: 21%;
+        width: 232px;
+    }
+
+    .bike {
+        bottom: 13%;
+        right: 17%;
+        width: 204px;
+    }
+
+    .people {
+        width: 400px;
+        right: 40px;
+    }
+
+    .present {
+        width: 360px;
+        right: 9%;
+    }
+    
+    .shopping {
+        width: 413.3px;
+        right: 10%;
+    }
+    
+    .bmart-rider {
+    
+    }
+    
+    .flag {
+        width: 352px;
+        right: 10%;
     }
 }

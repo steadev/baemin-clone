@@ -41,8 +41,8 @@ export class Section {
     drawHeaderContent() {
         const html = `
         <div class="header-content-container content-container">
-            <div class="header-content">
-                <div class="title">
+            <div class="header-content content">
+                <div class="header-title">
                     <img class="title-image" src="assets/images/header-content-text.png">
                 </div>
                 <div class="incruit-button">
@@ -60,8 +60,8 @@ export class Section {
     drawFooterContent() {
         const html = `
         <div class="header-content-container content-container">
-            <div class="header-content">
-                <div class="title">
+            <div class="footer-content content">
+                <div class="main-title">
                     <img class="title-image" src="assets/images/header-content-text.png">
                 </div>
                 <div class="incruit-button">
@@ -77,22 +77,65 @@ export class Section {
     }
 
     drawMainContent(page) {
-        const backgroundImage = `assets/images/header-content-background.jpg`;
+        const contentText = `main-text-${page + 1}.png`;
         const html = `
         <div class="main-content-container content-container">
-            <div class="header-content">
-                <div class="title">
-                    <img class="title-image" src="assets/images/header-content-text.png">
+            <div class="main-content content">
+                <div class="main-title">
+                    <img class="title-image" src="assets/images/${contentText}">
                 </div>
-                <div class="incruit-button">
-                    <img class="incruit-button-image" src="assets/images/btn-rider.png">
+                <div class="title-desc">
+                    3천만 이상이 선택한 배달의민족,
+                    <br>
+                    업계 최다 배달가능 업소 보유 중!
+                    <div class="title-sub-desc">
+                    (2017년 11월 기준)
+                    </div>
                 </div>
-                <div class="app-download-button">
-                    <img class="app-download-button-image" src="assets/images/btn-down-app.png">
-                </div>
+                ${this.drawMainContentImage(page)}
             </div>
         </div>
         `;
         this.appElem.innerHTML += html;
+    }
+
+    drawMainContentImage(page) {
+        switch (page) {
+            case 0:
+                return `
+                <div class="animation">
+                    <div class="road">
+                        <img src="assets/images/road.png">
+                    </div>
+                    <div class="bike move-bike">
+                        <img src="assets/images/bike.png">
+                    </div>
+                </div>`;
+            case 1:
+                return `
+                <div class="animation people move-people">
+                    <img src="assets/images/people.png">
+                </div>`;
+            case 2:
+                return `
+                <div class="animation present move-present">
+                    <img src="assets/images/present.png">
+                </div>`;
+            case 3:
+                return `
+                <div class="animation shopping move-shopping">
+                    <img src="assets/images/shoppinglive.png">
+                </div>`;
+            case 4:
+                return `
+                <div class="animation bmart-rider move-bmart-rider">
+                    <img src="assets/images/bmart-rider.png">
+                </div>`;
+            case 5:
+                return `
+                <div class="animation flag move-flag">
+                    <img src="assets/images/flag.png">
+                </div>`;
+        }
     }
 }
