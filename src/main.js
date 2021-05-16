@@ -9,6 +9,7 @@ const app = () => {
     for (let i = 0; i < mainPageCount; i++) {
         section.drawSection('main', i);
     }
+    section.drawSection('footer');
 }
 
 document.addEventListener("DOMContentLoaded", () => {

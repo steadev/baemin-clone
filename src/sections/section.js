@@ -1,6 +1,7 @@
 export class Section {
     constructor() { }
     appElem = document.querySelector('.app');
+    mainPageCount = 6;
 
     createSection(type, page) {
         this.drawSection(type, page)
