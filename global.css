@@ -3,7 +3,14 @@ body {
     margin: 0;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    font-family: "AppleSDGothicNeo", sans-serif;
+    line-height: 1.5;
+    font-size: 14px;
 }
 body::-webkit-scrollbar {
     display: none;
+}
+
+.app {
+    overflow-x: hidden;
 }

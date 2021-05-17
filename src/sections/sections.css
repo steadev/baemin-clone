@@ -42,15 +42,15 @@
 }
 .header-title {
     position: absolute;
+    width: 85%;
     max-width: 440px;
-    width: 440px;
-    padding-top: 20%;
-    left: 50px;
+    top: 18%;
+    left: 6%;
 }
 
 .main-title {
-    width: 65%;
-    padding-top: 20%;
+    width: 85%;
+    padding-top: 32%;
 }
 
 .title-image {
@@ -90,6 +90,19 @@
     font-weight: 100;
 }
 
+.title-sub-service-noti {
+    padding: 0;
+    margin-top: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: calc(5% + 24px);
+    position: relative;
+    z-index: 10;
+    list-style: none;
+}
+
 .animation {
     display: block;
 }
@@ -100,15 +113,20 @@
     vertical-align: top;
 }
 
-.move-bike,
-.move-bike,
+.move-bike {
+    -webkit-animation: bike 0.8s ease forwards;
+    animation: bike 0.8s ease forwards;
+}
 .move-people,
 .move-present,
 .move-shopping,
-.move-bmart-rider,
 .move-flag {
-    -webkit-animation: bike 0.8s ease forwards;
-    animation: bike 0.8s ease forwards;
+    -webkit-animation: move 0.8s ease forwards;
+    animation: move 0.8s ease forwards;
+}
+.move-bmart-rider {
+    -webkit-animation: move-left 0.8s ease forwards;
+    animation: move-left 0.8s ease forwards;
 }
 
 .road {
@@ -182,6 +200,17 @@
 }
 
 @media screen and (min-width: 768px) {
+    .header-title {
+        width: 440px;
+        top: 20%;
+        left: 50px;
+    }
+
+    .main-title {
+        width: 65%;
+        padding-top: 20%;
+    }
+
     .road {
         bottom: 16%;
         right: 21%;
@@ -216,5 +245,61 @@
     .flag {
         width: 352px;
         right: 10%;
+    }
+
+    .title-sub-service-noti br {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header-title {
+        width: 440px;
+    }
+
+    .main-title {
+        width: 500px;
+        padding-top: 165px;
+    }
+
+    .bmart-rider {
+        width: 600px;
+        bottom: 16%;
+    }
+}
+@keyframes bike {
+    0% {
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        -webkit-transform: translateX(60%) translateY(60%);
+        transform: translateX(60%) translateY(60%);
+    }
+}
+
+@keyframes move {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes move-left {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(25%);
+        transform: translateX(25%);
+        opacity: 1;
     }
 }
