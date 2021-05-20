@@ -1,15 +1,17 @@
+import { Scroll } from './scroll/scroll.js';
 import { Section } from './sections/section.js';
 
 const app = () => {
-    console.log('start');
+    const scroll = new Scroll('app', 8);
+    scroll.addSectionScrollEvent();
     const section = new Section('header');
     section.drawBase();
-    section.drawSection('header');
+    section.drawHeaderContent();
     const mainPageCount = 6;
     for (let i = 0; i < mainPageCount; i++) {
-        section.drawSection('main', i);
+        section.drawMainContent(i);
     }
-    section.drawSection('footer');
+    section.drawFooterContent();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

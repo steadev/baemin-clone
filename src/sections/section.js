@@ -1,31 +1,9 @@
 export class Section {
+
     constructor() { }
-    appElem = document.querySelector('.app');
-    mainPageCount = 6;
 
-    createSection(type, page) {
-        this.drawSection(type, page)
-    }
-
-    /**
-     * type: 'header' | 'main' | 'footer'
-     * page: 0 ~ 5
-     */
-    drawSection(type, page) {
-        switch (type) {
-            case 'header':
-                this.drawHeaderContent();
-                break;
-            case 'main':
-                this.drawMainContent(page);
-                break;
-            case 'footer':
-                this.drawFooterContent();
-                break;
-            default:
-                console.error(`ERROR: There is no section type - ${type}`);
-        }
-    }
+    _appElem = document.querySelector('.app');
+    _mainPageCount = 6;
 
     drawBase() {
         const html = `
@@ -36,7 +14,7 @@ export class Section {
             <img src="assets/images/scroll.png">
         </div>
         `;
-        this.appElem.innerHTML = html;
+        this._appElem.innerHTML = html;
     }
 
     drawHeaderContent() {
@@ -55,7 +33,7 @@ export class Section {
             </div>
         </div>
         `;
-        this.appElem.innerHTML += html;
+        this._appElem.innerHTML += html;
     }
 
     drawFooterContent() {
@@ -74,7 +52,7 @@ export class Section {
             </div>
         </div>
         `;
-        this.appElem.innerHTML += html;
+        this._appElem.innerHTML += html;
     }
 
     drawMainContent(page) {
@@ -86,16 +64,16 @@ export class Section {
                     <img class="title-image" src="assets/images/${contentText}">
                 </div>
                 <div class="title-desc">
-                    ${this.drawMainContentDescription(page)}
+                    ${this._drawMainContentDescription(page)}
                 </div>
-                ${this.drawMainContentImage(page)}
+                ${this._drawMainContentImage(page)}
             </div>
         </div>
         `;
-        this.appElem.innerHTML += html;
+        this._appElem.innerHTML += html;
     }
 
-    drawMainContentDescription(page) {
+    _drawMainContentDescription(page) {
         switch (page) {
             case 0: 
                 return `3천만 이상이 선택한 배달의민족,
@@ -137,7 +115,7 @@ export class Section {
         }
     }
 
-    drawMainContentImage(page) {
+    _drawMainContentImage(page) {
         switch (page) {
             case 0:
                 return `
